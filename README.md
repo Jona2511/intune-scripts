@@ -18,13 +18,13 @@ PowerShell scripts I use for Microsoft Intune: packaging apps, remediations, pla
 
 Read it first and try it on a test device or a small test group. Unless the header says otherwise, the scripts expect to run as SYSTEM in 64-bit PowerShell, which is how Intune runs them when you set "Run script in 64 bit PowerShell Host" to Yes.
 
-Scripts log to `C:\ProgramData\IntuneScripts\Logs`, one log file per script.
+Scripts that run on devices log to `%ProgramData%\<ScriptName>\`. Most of the scripts that change something support `-WhatIf`, so you can see what they would do first.
 
 ## Conventions
 
-Every script starts with comment-based help (`.SYNOPSIS`, `.DESCRIPTION` and `.NOTES` with the version and the context it runs in), so `Get-Help .\Script.ps1` works.
+Every script has its own folder with a README that lists its parameters, examples and, for Graph scripts, the permissions it needs. The scripts start with comment-based help, so `Get-Help .\Script.ps1 -Full` works too.
 
-Remediations come in pairs named `Detect-<Name>.ps1` and `Remediate-<Name>.ps1`. The detection script exits with 1 when something needs fixing and 0 when the device is fine.
+Remediation scripts do detection and repair in one file: `-DetectOnly` only checks and exits with 1 when something needs fixing, without it they repair. See [Remediations](Remediations) for the two exceptions.
 
 Nothing here contains tenant IDs, customer names or secrets. Values that differ per tenant are parameters or variables at the top of the script.
 

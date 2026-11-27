@@ -1,14 +1,14 @@
 # Apps
 
-One folder per app, packaged as a Win32 app with the [Microsoft Win32 Content Prep Tool](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
+Win32 apps, packaged with the [Microsoft Win32 Content Prep Tool](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool). One script handles install, uninstall and detection:
 
-```
-Apps/
-  <AppName>/
-    Install.ps1
-    Uninstall.ps1
-    Detect.ps1
-    README.md
-```
+- Install command: the script with its parameters
+- Uninstall command: the same script with `-Uninstall`
+- Detection: a custom detection script, which is a copy of the script with `-DetectOnly` set as the default
 
-The README in each app folder lists the install and uninstall commands to enter in Intune, the detection rule and anything the app needs first. Installers and `.intunewin` files are not in the repo.
+Each app's README has the exact commands to enter in Intune. Installers and `.intunewin` files are not in the repo.
+
+| Script | What it does |
+|---|---|
+| [Invoke-WingetApp](Invoke-WingetApp) | Installs, upgrades, uninstalls or detects any winget app as SYSTEM |
+| [Invoke-XelionInstall](Invoke-XelionInstall) | Silent install, uninstall and detection for the Xelion softphone |

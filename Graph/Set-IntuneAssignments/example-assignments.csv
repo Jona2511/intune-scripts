@@ -1,0 +1,6 @@
+Type;Name;Id;Group;Intent;Mode;Filter;FilterMode
+App;7-Zip;;SG-Intune-Devices-All;required;include;;
+App;Google Chrome;;All Users;available;include;;
+Compliance;Windows - Compliance;;SG-Intune-Devices-All;;include;;
+SettingsCatalog;Windows - Baseline;;SG-Intune-Devices-Test;;exclude;;
+DeviceConfiguration;Windows - WiFi;;All Devices;;include;Corporate devices;include

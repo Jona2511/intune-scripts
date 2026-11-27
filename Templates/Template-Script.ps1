@@ -15,8 +15,9 @@ param ()
 
 $ErrorActionPreference = 'Stop'
 
-$LogFolder = Join-Path -Path $env:ProgramData -ChildPath 'IntuneScripts\Logs'
-$LogFile = Join-Path -Path $LogFolder -ChildPath "$([System.IO.Path]::GetFileNameWithoutExtension($PSCommandPath)).log"
+$ScriptName = [System.IO.Path]::GetFileNameWithoutExtension($PSCommandPath)
+$LogFolder = Join-Path -Path $env:ProgramData -ChildPath $ScriptName
+$LogFile = Join-Path -Path $LogFolder -ChildPath "$ScriptName.log"
 
 function Write-Log {
     param (
