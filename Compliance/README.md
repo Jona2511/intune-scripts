@@ -1,12 +1,19 @@
 # Compliance
 
-Custom compliance settings for Windows. Each check has two files:
+Custom compliance checks for Windows. Each folder has a discovery script and a JSON file with the rules:
 
 ```
 Compliance/
   <Name>/
-    Discover-<Name>.ps1
+    <Name>.ps1
     <Name>.json
 ```
 
-The discovery script returns its results as one line of compressed JSON (`ConvertTo-Json -Compress`). The JSON file holds the rules Intune checks those results against, including the message users see when a device is not compliant.
+The script returns its results as one line of compressed JSON and must output nothing else. The JSON file holds the rules Intune checks those results against, including the message users see when their device is not compliant. Each README explains the setup in Intune.
+
+| Check | Compliant when |
+|---|---|
+| [Test-SophosAgent](Test-SophosAgent) | Sophos is installed and its services are running |
+| [Test-HuntressAgent](Test-HuntressAgent) | Huntress is installed and its services are running |
+| [Test-FirewallProfiles](Test-FirewallProfiles) | Windows Firewall is on for the domain, private and public profiles |
+| [Test-ForbiddenApps](Test-ForbiddenApps) | No apps from the forbidden list are installed |

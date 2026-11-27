@@ -1,0 +1,32 @@
+{
+  "Rules": [
+    {
+      "SettingName": "HuntressInstalled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://support.huntress.io",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Huntress is not installed",
+          "Description": "Huntress must be installed on this device. Contact your IT department."
+        }
+      ]
+    },
+    {
+      "SettingName": "HuntressRunning",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://support.huntress.io",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Huntress is not running",
+          "Description": "One or more Huntress services are stopped. Restart the device, and contact your IT department if this message stays."
+        }
+      ]
+    }
+  ]
+}

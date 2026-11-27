@@ -1,0 +1,46 @@
+{
+  "Rules": [
+    {
+      "SettingName": "DomainEnabled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Windows Firewall is off for domain networks",
+          "Description": "Turn on Windows Firewall for domain networks, or contact your IT department."
+        }
+      ]
+    },
+    {
+      "SettingName": "PrivateEnabled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Windows Firewall is off for private networks",
+          "Description": "Turn on Windows Firewall for private networks, or contact your IT department."
+        }
+      ]
+    },
+    {
+      "SettingName": "PublicEnabled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Windows Firewall is off for public networks",
+          "Description": "Turn on Windows Firewall for public networks, or contact your IT department."
+        }
+      ]
+    }
+  ]
+}

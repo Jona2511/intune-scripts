@@ -1,0 +1,18 @@
+{
+  "Rules": [
+    {
+      "SettingName": "ForbiddenAppCount",
+      "Operator": "IsEquals",
+      "DataType": "Int64",
+      "Operand": 0,
+      "MoreInfoUrl": "https://learn.microsoft.com/mem/intune/protect/compliance-use-custom-settings",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "An app that is not allowed is installed",
+          "Description": "This device has software installed that is not allowed, such as remote control or torrent software. Remove it, or contact your IT department."
+        }
+      ]
+    }
+  ]
+}

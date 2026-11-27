@@ -1,0 +1,32 @@
+{
+  "Rules": [
+    {
+      "SettingName": "SophosInstalled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://support.sophos.com",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Sophos is not installed",
+          "Description": "Sophos must be installed on this device. Contact your IT department."
+        }
+      ]
+    },
+    {
+      "SettingName": "SophosRunning",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://support.sophos.com",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Sophos is not running",
+          "Description": "One or more Sophos services are stopped. Restart the device, and contact your IT department if this message stays."
+        }
+      ]
+    }
+  ]
+}
