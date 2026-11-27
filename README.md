@@ -1,6 +1,6 @@
 # intune-scripts
 
-PowerShell scripts I use for Microsoft Intune: packaging apps, remediations, platform scripts, custom compliance, Autopilot and automation through Microsoft Graph.
+PowerShell scripts I use for Microsoft Intune and Microsoft 365: packaging apps, remediations, platform scripts, custom compliance, Autopilot, user management and automation through Microsoft Graph.
 
 ## Structure
 
@@ -12,6 +12,7 @@ PowerShell scripts I use for Microsoft Intune: packaging apps, remediations, pla
 | [Compliance](Compliance) | Custom compliance: discovery scripts with their JSON rules |
 | [Autopilot](Autopilot) | Device registration, group tags and other Autopilot tasks |
 | [Graph](Graph) | Reporting and bulk changes through Microsoft Graph |
+| [Users](Users) | Onboarding, offboarding and cleaning up user accounts |
 | [Templates](Templates) | Starting points for new scripts |
 
 ## Before you use a script
