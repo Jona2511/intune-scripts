@@ -1,0 +1,23 @@
+name: PSScriptAnalyzer
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Analyze scripts
+        shell: pwsh
+        run: |
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+          $results = Invoke-ScriptAnalyzer -Path . -Recurse -Severity Error, Warning
+          $results | Format-Table -AutoSize
+          # Warnings are shown, errors fail the run
+          if ($results | Where-Object Severity -eq 'Error') { exit 1 }

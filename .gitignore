@@ -1,0 +1,14 @@
+# Packaged apps and installers
+*.intunewin
+*.msi
+*.exe
+
+# Logs and local output
+*.log
+Output/
+
+# Editors
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

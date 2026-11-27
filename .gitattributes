@@ -1,0 +1,4 @@
+# Windows line endings for PowerShell, so scripts behave the same when downloaded as raw files
+*.ps1  text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
